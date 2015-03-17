@@ -10,7 +10,7 @@
 Send push message using Apple's APN and Google's GCM services
 
 
-## Installation &nbsp; [![NPM version](https://badge.fury.io/js/machinepack-pushnotifications.svg)](http://badge.fury.io/js/machinepack-pushnotifications) [![Build Status](https://travis-ci.org/mikermcneil/machinepack-pushnotifications.png?branch=master)](https://travis-ci.org/mikermcneil/machinepack-pushnotifications)
+## Installation &nbsp; [![NPM version](https://badge.fury.io/js/machinepack-pushnotifications.svg)](http://badge.fury.io/js/machinepack-pushnotifications) [![Build Status](https://travis-ci.org/Caligone/machinepack-pushnotifications.png?branch=master)](https://travis-ci.org/Caligone/machinepack-pushnotifications)
 
 ```sh
 $ npm install machinepack-pushnotifications

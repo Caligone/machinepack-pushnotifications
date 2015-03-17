@@ -3,7 +3,8 @@
   machinepack-pushnotifications
 </h1>
 
-# /!\ PRE-ALPHA version ! 
+## /!\ Unstable version. Do not use in production environment /!\
+
 ### [Docs](http://node-machine.org/machinepack-pushnotifications) &nbsp; [Browse other machines](http://node-machine.org/machinepacks) &nbsp;  [FAQ](http://node-machine.org/implementing/FAQ)  &nbsp;  [Newsgroup](https://groups.google.com/forum/?hl=en#!forum/node-machine)
 
 Send push message using Apple's APN and Google's GCM services
@@ -27,5 +28,5 @@ Learn more at <a href="http://node-machine.org/implementing/FAQ" title="Machine 
 
 ## License
 
-MIT &copy; 2015 contributors
+MIT &copy; 2015 Caligone and contributors
 

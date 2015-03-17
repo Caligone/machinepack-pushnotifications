@@ -19,7 +19,9 @@
   "license": "MIT",
   "dependencies": {
     "apn": "^1.7.3",
-    "machine": "^3.0.0"
+    "lodash": "^3.5.0",
+    "machine": "^3.0.0",
+    "node-gcm": "^0.9.15"
   },
   "devDependencies": {
     "test-machinepack-mocha": "^0.2.2"
@@ -29,10 +31,11 @@
     "machineDir": "machines/",
     "machines": [
       "send-push-notification"
-    ]
+    ],
+    "testsUrl": "https://travis-ci.org/Caligone/machinepack-pushnotifications"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "http://github.com/Caligone/machinepack-pushnotifications.git"
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Caligone/machinepack-pushnotifications.git"
   }
 }

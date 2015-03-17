@@ -1,7 +1,8 @@
 var machinepack = require('../.');
 
 machinepack.sendPushNotification({
-    notification: {
+    type: 0,
+    message: {
         expiry: 1426493518,
         badge: 3,
         alert: 'Hey you !',
@@ -16,5 +17,5 @@ machinepack.sendPushNotification({
 }, function (d) {
     console.log(d);
 }, function(d) {
-    console.log(d);
+    console.log(d.stack);
 });

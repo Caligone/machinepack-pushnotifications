@@ -1,4 +1,6 @@
-var apn = require('apn');
+'use strict';
+
+var Sender = require('../lib/Sender');
 
 module.exports = {
 
@@ -9,12 +11,11 @@ module.exports = {
     extendedDescription: '',
 
     inputs: {
-        notification: {
+        message: {
             example: {
                 expiry: 1426493518,
                 badge: 3,
                 alert: 'Hey you !',
-                sound: 'ping.aiff',
                 payload: {
                     data: 'Here is my data',
                     otherData: 'And here is some other'
@@ -25,12 +26,17 @@ module.exports = {
         },
         deviceToken: {
             example: '5gxadhy6 6zmtxfl6 5zpbcxmw ez3w7ksf qscpr55t trknkzap 7yyt45sc g6jrw7qz',
-            description: 'The token device',
+            description: 'The token device or an array of device tokens',
             required: true
         },
         connectionOptions: {
             example: {},
             description: 'The connection options cf https://www.npmjs.com/package/apn',
+            required: true
+        },
+        type: {
+            example: 0,
+            description: 'The type of push notification (0: Google, 1: Apple)',
             required: true
         }
 
@@ -49,22 +55,21 @@ module.exports = {
     },
 
     fn: function (inputs, exits) {
+        var sender;
         try {
-            var apnConnection = new apn.Connection(inputs.conn);
+            sender = new Sender(inputs.type, inputs.connectionOptions);
         }
         catch (ex) {
-            exits.error(ex);
+            return exits.error(ex);
         }
-        var device = new apn.Device(inputs.deviceToken);
-        var pushNotification = new apn.Notification();
 
-        pushNotification.expiry = inputs.notification.expiry;
-        pushNotification.badge = inputs.notification.badge;
-        pushNotification.sound = inputs.notification.sound;
-        pushNotification.alert = inputs.notification.alert;
-        pushNotification.payload = inputs.notification.payload;
+        try {
+            sender.send(inputs.message, inputs.deviceToken);
+        }
+        catch (ex) {
+            return exits.error(ex);
+        }
 
-        apnConnection.pushNotification(pushNotification, device);
         return exits.success();
     },
 };

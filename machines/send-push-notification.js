@@ -13,15 +13,8 @@ module.exports = {
     inputs: {
         message: {
             example: {
-                expiry: 1426493518,
-                badge: 3,
-                alert: 'Hey you !',
-                payload: {
-                    data: 'Here is my data',
-                    otherData: 'And here is some other'
-                }
             },
-            description: 'The notification object',
+            description: 'The notification object (https://www.npmjs.com/package/apn or https://www.npmjs.com/package/node-gcm)',
             required: true
         },
         deviceToken: {
@@ -31,7 +24,7 @@ module.exports = {
         },
         connectionOptions: {
             example: {},
-            description: 'The connection options cf https://www.npmjs.com/package/apn',
+            description: 'The connection options (https://www.npmjs.com/package/apn or https://www.npmjs.com/package/node-gcm)',
             required: true
         },
         type: {
@@ -39,7 +32,6 @@ module.exports = {
             description: 'The type of push notification (0: Google, 1: Apple)',
             required: true
         }
-
     },
 
     defaultExit: 'success',

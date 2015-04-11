@@ -1,7 +1,7 @@
 var machinepack = require('../.');
 
 machinepack.sendPushNotification({
-    type: 0,
+    type: 1,
     message: {
         expiry: 1426493518,
         badge: 3,
@@ -12,10 +12,12 @@ machinepack.sendPushNotification({
             otherData: 'And here is some other'
         }
     }, 
-    deviceToken: '5gxadhy6 6zmtxfl6 5zpbcxmw ez3w7ksf qscpr55t trknkzap 7yyt45sc g6jrw7qz',
-    connectionOptions: {}
+    deviceToken: 'ec52b3524b0a883255ab23629442bd96cd5d504b5ec8c3b315046f3682743202',
+    connectionOptions: {
+        passphrase: 'toto'
+    }
 }, function (d) {
     console.log(d);
-}, function(d) {
+}, function (d) {
     console.log(d.stack);
 });

@@ -54,7 +54,7 @@ module.exports = {
         catch (ex) {
             return exits.error(ex);
         }
-
+        
         try {
             sender.send(inputs.message, inputs.deviceToken);
         }

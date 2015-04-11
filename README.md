@@ -3,7 +3,7 @@
   machinepack-pushnotifications
 </h1>
 
-## /!\ Unstable version. Do not use in production environment /!\
+## /!\ Unstable version. Do not use in production environment. Incompatible with Treeline. Waiting a fix /!\
 
 ### [Docs](http://node-machine.org/machinepack-pushnotifications) &nbsp; [Browse other machines](http://node-machine.org/machinepacks) &nbsp;  [FAQ](http://node-machine.org/implementing/FAQ)  &nbsp;  [Newsgroup](https://groups.google.com/forum/?hl=en#!forum/node-machine)
 
